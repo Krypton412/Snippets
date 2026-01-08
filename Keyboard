@@ -1,0 +1,46 @@
+int C = 0;
+int D = 0;
+int E = 0;
+int F = 0;
+int G = 0;
+int A = 0;
+int B = 0;
+
+void setup() {
+  pinMode(4, INPUT);
+  pinMode(5, INPUT);
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+  pinMode(10, INPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop() {
+  C = digitalRead(10);
+  D = digitalRead(9);
+  E = digitalRead(8);
+  F = digitalRead(7);
+  G = digitalRead(6);
+  A = digitalRead(5);
+  B = digitalRead(4);
+
+  if (C == HIGH) {
+    tone(11, 523);
+  } else if (D == HIGH) {
+    tone(11, 587);
+  } else if (E == HIGH) {
+    tone(11, 659);
+  } else if (F == HIGH) {
+    tone(11, 698);
+  } else if (G == HIGH) {
+    tone(11, 784);
+  } else if (A == HIGH) {
+    tone(11, 880);
+  } else if (B == HIGH) {
+    tone(11, 988);
+  } else {
+    noTone(11);
+  }
+}

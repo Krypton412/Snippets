@@ -5,8 +5,10 @@ int F = 0;
 int G = 0;
 int A = 0;
 int B = 0;
+int C2 = 0;
 
 void setup() {
+  pinMode(3, INPUT);
   pinMode(4, INPUT);
   pinMode(5, INPUT);
   pinMode(6, INPUT);
@@ -25,7 +27,8 @@ void loop() {
   G = digitalRead(6);
   A = digitalRead(5);
   B = digitalRead(4);
-
+  C2 = digitalRead(3);
+  
   if (C == HIGH) {
     tone(11, 523);
   } else if (D == HIGH) {
@@ -40,6 +43,8 @@ void loop() {
     tone(11, 880);
   } else if (B == HIGH) {
     tone(11, 988);
+  } else if (C2 == HIGH) {
+    tone(11, 1047);
   } else {
     noTone(11);
   }
